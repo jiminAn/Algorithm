@@ -35,8 +35,8 @@ int main(void) {
 	return 0;
 }
 bool compare(const pair<int, int>& a, const pair<int, int>& b) {
-	if (a.second == b.second) {//끝나는 시간이 같을 경우
-		return a.first < b.first; //시작하는 시간 오름차순 정렬
+	if (a.second == b.second) {//if finish times are same
+		return a.first < b.first; //ascending order to start time
 	}
-	return a.second < b.second; //끝나는 시간 오름차순 정렬
+	return a.second < b.second; //ascending oreder to finish time
 }
