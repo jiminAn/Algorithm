@@ -1,8 +1,10 @@
-### This repository aims to study Algorithm theories and solve problems.
+## 알고리즘 문제 풀이 및 이론 공부 repository 입니다.
 
 
-Below link is source site that I found algorithm problems.
+알고리즘 문제 출처 & 참고 강의
 * link: <https://www.acmicpc.net/>
+* link: <https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDYSqAAbw5UW6>
+
 
 
 
