@@ -14,7 +14,5 @@
 
 ### Problems
 
-1. 색종이 만들기 Make Confetti
-*link : <https://www.acmicpc.net/problem/2630>
-2. 숫자 카드 : Card 
-*link : <https://www.acmicpc.net/problem/10815>
+1. 색종이 만들기 *link <https://www.acmicpc.net/problem/2630>
+2. 숫자 카드 * link <https://www.acmicpc.net/problem/10815>
