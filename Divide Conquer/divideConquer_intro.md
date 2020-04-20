@@ -14,5 +14,5 @@
 
 ### Problems
 
-1. 색종이 만들기 *link <https://www.acmicpc.net/problem/2630>
-2. 숫자 카드 * link <https://www.acmicpc.net/problem/10815>
+*2630번.색종이 만들기 <https://www.acmicpc.net/problem/2630>
+*10815번.숫자 카드 <https://www.acmicpc.net/problem/10815>
