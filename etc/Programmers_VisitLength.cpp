@@ -6,7 +6,7 @@ int solution(string dirs)
 	int answer = 0;
     bool check[11][11][11][11] = {false};
     int x,y;
-    x = y = 5; //실제 좌표 상의 (0,0)-> 배열 index (5,5)
+    x = y = 5; //실제 좌표 상의 (0,0) -> 배열 index (5,5)
     
     /*(x1,y1)->(x2,y2)로 이동할 경우 지나간 길 경로 체크시 방향성이 없는 문제이므로
     (x2,y2)->(x1,y1)도 체크해주어야 함*/
