@@ -14,6 +14,10 @@
 
 ### Problems
 
-* 2630번.색종이 만들기 <https://www.acmicpc.net/problem/2630>
+#### 이분 탐색 
 * 10815번.숫자 카드 <https://www.acmicpc.net/problem/10815>
+* 1920번.수 찾기 <https://www.acmicpc.net/problem/1920>
+
+#### 재귀함수 
 * 1992번.쿼드 트리 <https://www.acmicpc.net/problem/1992>
+* 2630번.색종이 만들기 <https://www.acmicpc.net/problem/2630>
