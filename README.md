@@ -10,5 +10,6 @@
 
 
 ## CONTENTS
-* Greedy Algorithm (16.04.2020)
-*
+* Greedy Algorithm (2020.04.16)
+* Divide and Conquer (2020.04.23)
+* Backtracking (2020.05.13)
