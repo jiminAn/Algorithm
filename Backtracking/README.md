@@ -1,15 +1,12 @@
-## 알고리즘 문제 풀이 및 이론 공부
+# Greedy Algorithms (2020.04.16)
+## 그리디 알고리즘이란?
+최적화 문제를 해결하는 알고리즘으로 최적해를 구하는 근시안적 방법
+최적값(min, max) 구하는 문제로 하나의 문제에 여러 해가 있을 수 있음 
+
+### Activity Selection Problem
+* 1931번.회의실 배정 <https://www.acmicpc.net/problem/1931>
 
 
-알고리즘 문제 출처 & 참고 강의
-* 백준알고리즘(문제): <https://www.acmicpc.net/>
-* 프로그래머스(문제_: <https://programmers.co.kr/>
-* SW Expert Academy(강의): <https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDYSqAAbw5UW6>
-
-
-
-
-## CONTENTS
-* Greedy Algorithm (2020.04.16)
-* Divide and Conquer (2020.04.23)
-* Backtracking (2020.05.13)
+### etc
+* 1969번.DNA <https://www.acmicpc.net/problem/1969>
+* 5585번.거스름돈 <https://www.acmicpc.net/problem/5585>
