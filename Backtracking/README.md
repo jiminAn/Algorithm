@@ -27,8 +27,8 @@
 -2) 원소의 개수가 최대인 부분 집합을 찾는 문제-> 최적화 문제  
 
 
-### Activity Selection Problem
-* 1931번.회의실 배정 <https://www.acmicpc.net/problem/1931>
+### 백트래킹 문제
+* 9663번.n-Queen https://www.acmicpc.net/problem/9663
 
 
 ### etc
