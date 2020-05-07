@@ -3,11 +3,11 @@
 ## level 3
 
 1. 가장 긴 펠린드롬  The longest palindrome (100/100)
-* link: <https://programmers.co.kr/learn/courses/30/lessons/12904/>
-- 삽질한 테스트 케이스 : "a" : 1, "aa" : 2, "ab" : 1, "abba" : 4, "abcbbcd" : 3이 아니라 4 (짝수 palindrome도 가능)
+* link: <https://programmers.co.kr/learn/courses/30/lessons/12904/>  
+삽질한 테스트 케이스 : "a" : 1, "aa" : 2, "ab" : 1, "abba" : 4, "abcbbcd" : 3이 아니라 4 (짝수 palindrome도 가능)
 2. 방문 길이 Visit Length (100/100)
-* link : <https://programmers.co.kr/learn/courses/30/lessons/49994>
-- 중요 : 4차원 배열 이용
+* link : <https://programmers.co.kr/learn/courses/30/lessons/49994>  
+중요 : 4차원 배열 이용
 
 ## level 2
 1. 스킬 트리 Skill Tree (100/100)
