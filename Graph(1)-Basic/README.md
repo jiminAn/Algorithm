@@ -72,4 +72,5 @@ queue를 사용하여 구현
 ### 문제
 * 1260번.DFS와 BFS <https://www.acmicpc.net/problem/1260>
 * 2606번.바이러스 <https://www.acmicpc.net/problem/2606>
+* 2178번.미로탐색 <https://www.acmicpc.net/problem/2178>
 
