@@ -23,17 +23,17 @@
 
 #### pseudocode
 Tree prim(Vertex V, Edge E){  
-&nbsp;&nbsp;&nbsp;&nbsp;Vertex *U;
-&nbsp;&nbsp;&nbsp;&nbsp;Vertex u,v;
-&nbsp;&nbsp;&nbsp;&nbsp;T = {};
-&nbsp;&nbsp;&nbsp;&nbsp;U = {A};
-&nbsp;&nbsp;&nbsp;&nbsp;while( U != V){
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(u,v) = lowest cost edge with u in U and v in (V-U);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T += (u,v);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U += v;
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;return T;
-}
+&nbsp;&nbsp;&nbsp;&nbsp;Vertex *U;  
+&nbsp;&nbsp;&nbsp;&nbsp;Vertex u,v;  
+&nbsp;&nbsp;&nbsp;&nbsp;T = {};  
+&nbsp;&nbsp;&nbsp;&nbsp;U = {A};  
+&nbsp;&nbsp;&nbsp;&nbsp;while( U != V){  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(u,v) = lowest cost edge with u in U and v in (V-U);  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T += (u,v);  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U += v;  
+&nbsp;&nbsp;&nbsp;&nbsp;}  
+&nbsp;&nbsp;&nbsp;&nbsp;return T;  
+}  
 
 
 
