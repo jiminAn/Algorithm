@@ -69,4 +69,8 @@ queue를 사용하여 구현
 *집합의 대표자란? 집합을 구분하는 특정원소를 대표자라고 함  
 - Union : 원소 x가 속한 집합과 y가 속한 집합이 하나의 집합으로 합쳐지는 연산
 
+### 문제
+* 1260번.DFS와 BFS <https://www.acmicpc.net/problem/1260>
+* 2606번.바이러스 <https://www.acmicpc.net/problem/2606>
+* 2178번.미로탐색 <https://www.acmicpc.net/problem/2178>
 
