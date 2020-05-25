@@ -59,15 +59,15 @@ Tree Kruskal(Vertex V, Edge E){
 &nbsp;&nbsp;&nbsp;&nbsp;T = {};    
 &nbsp;&nbsp;&nbsp;&nbsp;sort edge in E in ascending order;  
 &nbsp;&nbsp;&nbsp;&nbsp;for each vertex V in the set V  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEW_LABEL(v);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEW_LABEL(v);  
 &nbsp;&nbsp;&nbsp;&nbsp;for each (u,v) in E, in ascending oreder of weight{  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if LABEL(u) is not equal to LABEL(V){
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add the edge (u,v) to the tree T;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNION(LABEL(u), LABEL(v));
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}  
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;return T;
-}  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if LABEL(u) is not equal to LABEL(V){  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add the edge (u,v) to the tree T;  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNION(LABEL(u), LABEL(v));  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}    
+&nbsp;&nbsp;&nbsp;&nbsp;}  
+&nbsp;&nbsp;&nbsp;&nbsp;return T;  
+}   
 
 #### 용어 정리
 1. 신장 트리(Spanning Tree) : N개의 정점을 포함하는 무향 그래프에서 n개의 정점과 n-1개의 간선으로 구성된 트리
@@ -86,9 +86,16 @@ Tree Kruskal(Vertex V, Edge E){
 ### 단일 시작점 최단 경로 문제 (Single Source Shortest Path)
 :G내에 있는 한 노드로부터 다른 모든 노드로 까지의 최단거리
 
-
 #### Dijkstra Algorithm 
+: 시작 정점에서 거리가 최소인 정점부터 선택해 나가면서 최단 경로를 구하는 방식  
+- 방향 그래프  
+- 양수 가중치만을 가지는 egde  
+- 시간복잡도 O(m)+O(nlogn)
+
 #### Bellman-Ford Algorithm
+: Dijkstra Algorithm 은 negative edge를 catch하지 못하는 점을 개선한 알고리즘
+- 음의 edge는 허용하나 음의 cycle은 불가
+- 지나간 time clock도 봄 --> 시간복잡도 O(n^2)
 
 ### 모든 쌍 최단 경로 문제 (All Pairs Shortest Path)
 #### Floyd-Warshall Algorithm
