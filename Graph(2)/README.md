@@ -104,13 +104,5 @@ Tree Kruskal(Vertex V, Edge E){
 
 ### ---------------------------------적용 문제 예시--------------------------------------
 
-
-
-
-### 백트래킹 문제
-* 9663번.n-Queen https://www.acmicpc.net/problem/9663
-
-
-### etc
-* 14888번.연산자 끼워넣기 https://www.acmicpc.net/problem/14888
-* 5585번.거스름돈 <https://www.acmicpc.net/problem/5585>
+* 1197번.최소 스패닝 트리 https://www.acmicpc.net/problem/1197
+* 1916번.최소 비용 구하기 <https://www.acmicpc.net/problem/1916>
