@@ -51,6 +51,7 @@ void primMST(){
     int src = 1; // 시작 vertex
     int v, weight;
     
+    /*vertex 번호가 1부터 시작하므로 1~V 이용*/
     vector<int> key(V+1,INF); //key값을 무한대로 초기화한 벡터 선언
     vector<int> parent(V+1,-1); //부모 노드를 표현하기 위한 벡터 선언, MST 저장
     vector<bool> inMST(V+1,false); //MST에 포함되어있는지 여부 체크하는 벡터
