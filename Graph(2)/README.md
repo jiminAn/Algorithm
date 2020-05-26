@@ -105,4 +105,6 @@ Tree Kruskal(Vertex V, Edge E){
 ### ---------------------------------적용 문제 예시--------------------------------------
 
 * 1197번.최소 스패닝 트리 https://www.acmicpc.net/problem/1197
+- 참고 : <https://www.geeksforgeeks.org/prims-algorithm-using-priority_queue-stl/>
 * 1916번.최소 비용 구하기 <https://www.acmicpc.net/problem/1916>
+- 참고 : <https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-priority_queue-stl/?ref=lbp>
