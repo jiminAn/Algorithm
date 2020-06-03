@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#define INF 987654321 // ?? 왜 최대값을 문제 cost 최대값인 100001로하면 틀리고 이 값으로 하면 맞지>?!!/!?
+#define INF 987654321 // ?? 왜 최대값을 문제 cost 최대값인 100001로하면 틀리고 이 값으로 하면 맞지? -> 이유: 이 무한대는 dist합으로 해야되므로 충분히 커여됨 ㅇㅇ
 using namespace std;
 typedef pair<int,int> iPair;
 
