@@ -91,7 +91,7 @@ f(n) = min(f(n-6),f(n-4),f(n-1)} + 1
 ### ---------------------------------적용 문제 예시--------------------------------------
 
 ## 백준 사이트
-* 5052번.전화번호 목록 <https://www.acmicpc.net/problem/5052>
+* 2293번.동전 1 <https://www.acmicpc.net/problem/2293>
+* 1912번.연속합 <https://www.acmicpc.net/problem/1912>
 
-## 프로그래머스
-* level2.문자열 압축 <https://programmers.co.kr/learn/courses/30/lessons/60057>
+
