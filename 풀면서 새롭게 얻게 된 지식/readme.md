@@ -44,7 +44,7 @@ cout << ans << '%' << '\n'; // 소수점 아래로 세번째 수까지 출력
 ## 8단계: 문자열
 
 ### 1152번. 단어의 개수
-- <https://www.acmicpc.net/problem/1152>
+- <https://www.acmicpc.net/problem/1152>  
 : c++에서 공백 포함 문자열 읽기
 ```
 #include <string>
