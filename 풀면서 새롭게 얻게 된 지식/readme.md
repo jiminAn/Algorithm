@@ -39,3 +39,17 @@ cout << ans << '%' << '\n'; // 소수점 아래로 세번째 수까지 출력
   - 올림: ceil() // ceil(4.2) = 5.0
   - 내림: floor() // floor(4.2) = 4.0
   - 반올림: round() // round(4.6) = 5.0 , round(4.2) = 4.0
+  
+
+## 8단계: 문자열
+
+### 1152번. 단어의 개수
+- <https://www.acmicpc.net/problem/1152>
+: c++에서 공백 포함 문자열 읽기
+```
+#include <string>
+int main(void){
+    string str;
+    getline(cin, str);
+}
+```
