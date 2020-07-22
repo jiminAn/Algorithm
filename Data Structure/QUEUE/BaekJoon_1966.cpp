@@ -1,7 +1,6 @@
 #include <iostream>
 #include <queue>
 #include <list>
-#include <deque>
 
 using namespace std;
 queue<pair<int, int>> q; //리스트를 사용하는 queue 생성
