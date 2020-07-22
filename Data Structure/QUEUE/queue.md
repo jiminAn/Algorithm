@@ -1,6 +1,5 @@
 # Queue
 
-
 ## 1차시. Queue의 자료구조의 개념
 
 ### Queue의 특성
@@ -19,11 +18,11 @@
 - 꼬리(Rear) : 저장된 원소 중 마지막 번째 원소로 삽입연산이 일어나는 부분
 
 2. 기본 연산
-- 삽입: enQueue ( front++ )
-- 삭제: deQueue ( rear-- )
-- 생성: createQueue ( front = rear = -1)
-- 공백상태 확인: isEmpty ( front == rear )
-- 포화상태 확인: isFull ( rear == max_size - 1 )
+- 생성: createQueue 
+- 삽입: enQueue 
+- 삭제: deQueue 
+- 공백상태 확인: isEmpty 
+- 포화상태 확인: isFull 
 - 확인: Qpeek
 
 ## 2차시. Queue의 종류
@@ -44,7 +43,8 @@
 - 기본 연산과 동일
 
 4. 선형 Queue의 문제점
-- 삽입, 삭제를 계속 할 경우 front++, rear--가 반복되기 때문에 배열의 앞부분에 활용할 수 있는 공간이 있음에도, rear == n-1, 즉, 포화 상태로 인식하게 되어 더 이상의 삽입을 수행할 수 없게 된다
+- 삽입, 삭제를 계속 할 경우 front++, rear--가 반복되기 때문에 배열의 앞부분에 활용할 수 있는 공간이 있음에도, 
+rear == n-1, 즉, 포화 상태로 인식하게 되어 더 이상의 삽입을 수행할 수 없게 된다
 - 해결방법1. 매 연산 시, 저장된 원소들을 배열의 앞부분으로 모두 이동 시킴->단점: 원소 이동 시 많은 시간이 소요되므로 효율성 하락
 - 해결방법2. 원형 Queue 사용
 
@@ -67,14 +67,17 @@
 - 삭제 위치: front = (front + 1)mod n
 
 5. 원형 Queue의 기본 연산 과정
-- Queue 생성: createQueue()
+- Queue 생성: createQueue()  
 : front == rear
-- 원소 A 삽입: enQueue(A)
-: rear++
-- 원소 삭제 : deQueue()
-: front++
-- Queue가 포화상태일 경우 원소 삽입
-: (reat + 1)mod n = front
+- 포화조건 체크. 
+: (reat + 1)mod n == front -> 참일 경우 포화 상태이므로 원소의 삽입이 일어날 수 없음
+- 원소 A 삽입: enQueue(A)  
+: (rear + 1)mod n
+- 공백상태 체크.  
+: rear == front -> 참일 경우 공백 상태이므로 원소의 삭제가 일어날 수 없음
+- 원소 삭제 : deQueue()  
+: (front + 1)mod n
+
 
 ### 연결 Queue의 특징
 
@@ -118,7 +121,8 @@
 ## 추가. Deque
 
 ### Deque란?
-: Deque란 Double ended queue로, 삭제는 앞에서만, 삽입은 뒤에서만 이루어지는 queue와 다르게 삽입, 삭제를 앞 뒤 양쪽에서 할 수 있는 자료구조이다. Deque는 스택과 큐의 장점을 모은것으로 선입선출, 후입선출 방식 둘 다 사용할 수 있다.
+: Deque란 Double ended queue로, 삭제는 앞에서만, 삽입은 뒤에서만 이루어지는 queue와 다르게 삽입, 삭제를 앞 뒤 양쪽에서 할 수 있는 자료구조이다. 
+Deque는 스택과 큐의 장점을 모은것으로 선입선출, 후입선출 방식 둘 다 사용할 수 있다.
 
 ### Deque의 특징
 1. 크기가 가변적이다
