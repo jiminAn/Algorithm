@@ -9,14 +9,14 @@
 
 
 
-## CONTENTS(1)
+## CONTENTS : Algorithm
 * Greedy Algorithm (2020.04.16)
 * Divide and Conquer (2020.04.23)
 * Backtracking (2020.05.13)
 * Graph(1)-Basic(2020.05.20)
 * Graph(2) (2020.05.27)
 
-## CONTENTS(2)
+## CONTENTS : Data Structure
 * Tree (2020.07.15)
 * Queue (2020.07.22)
 * List (2020.07.29)
