@@ -53,3 +53,13 @@ int main(void){
     getline(cin, str);
 }
 ```
+
+# 백준 분류별로 풀어보기
+
+## 링크드리스트
+### 1158번. 요세푸스 문제
+- <https://www.acmicpc.net/problem/1158>  
+: iterator 쓸 때 주의할 점  
+- it.erase(it) -> x : iterator에서 제거 연산을 사용할 경우 더 이상 해당 iterator를 사용하지 못함  
+- it = it.erase(it) -> o : 원소를 제거하고 다음 원소를 반환한 값을 it에 저장하여 삭제된 원소 다음의 원소를 iterator가 가리키게 함  
++ it = it.insert(it,2) 경우도 마찬가지, it는 삽입한 원소 2를 가리키게 된다
