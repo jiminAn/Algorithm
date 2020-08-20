@@ -1,4 +1,4 @@
-# 동적계획법(Dynamic Programming) (2020.06.10)
+# 동적계획법(Dynamic Programming) (2020.06.10) (2020.08.18)
 
 ## 동적계획법의 소개
 
