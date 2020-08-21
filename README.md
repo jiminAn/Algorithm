@@ -10,7 +10,7 @@
 
 
 ## CONTENTS : Algorithm
-* Greedy Algorithm (2020.04.16)
+* Greedy Algorithm (2020.04.16), (2020.08.26)
 * Divide and Conquer (2020.04.23)
 * Backtracking (2020.05.13), (2020.08.12)
 * Graph(1)-Basic(2020.05.20)
