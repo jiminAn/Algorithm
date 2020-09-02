@@ -63,3 +63,35 @@ int main(void){
 it.erase(it) -> x : iterator에서 제거 연산을 사용할 경우 더 이상 해당 iterator를 사용하지 못함  
 it = it.erase(it) -> o : 원소를 제거하고 다음 원소를 반환한 값을 it에 저장하여 삭제된 원소 다음의 원소를 iterator가 가리키게 함  
 it = it.insert(it,2) 경우도 마찬가지, it는 삽입한 원소 2를 가리키게 된다
+
+# 프로그래머스 레벨별로 풀어보기
+## LEVEL 2
+### 방문길이
+- <https://programmers.co.kr/learn/courses/30/lessons/49994>
+: 좌표 문제 코드 간단히 꿀팁
+1. x,y 이동 시 일일이 풀어써주는 것보다는 배열을 이용해서 코드를 짧게 만들어주는게 좋음 
+```
+int dy[4] = {0,0,1,-1}; // 오,왼,위,아
+int dx[4] = {1,-1,0,0}; // 오,왼,위,아
+
+if(dirs[i] == 'R') dir = 0;
+else if(dirs[i] == 'L') dir = 1;
+else if(dirs[i] == 'U') dir = 2;
+else dir = 3;
+        
+x += dx[dir];
+y += dy[dir];
+```
+2. x,y 가 이동할 수 있는 한계가 있을 경우 tmp_x, tmp_y를 이용하자
+```
+tmp_x = x + dx[dir];
+tmp_y = y + dy[dir];
+
+if(tmp_x < MIM_X || tmp_x > MAX_X || tmp_y < MIN_Y || tmp_y > MIN_Y)// 범위 체크
+     break;
+     ...
+ // 범위안일 경우 이동좌표를 저장
+ y = tmp_y;
+ x = tmp_x;
+
+```
