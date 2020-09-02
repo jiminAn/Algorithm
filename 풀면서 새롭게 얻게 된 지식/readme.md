@@ -89,7 +89,6 @@ tmp_y = y + dy[dir];
 
 if(tmp_x < MIM_X || tmp_x > MAX_X || tmp_y < MIN_Y || tmp_y > MIN_Y)// 범위 체크
      break;
-     ...
  // 범위안일 경우 이동좌표를 저장
  y = tmp_y;
  x = tmp_x;
