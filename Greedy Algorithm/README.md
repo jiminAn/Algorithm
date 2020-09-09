@@ -1,7 +1,4 @@
 # Greedy Algorithms (2020.04.16) (2020.09.09)
-(본 강의 노트는 SW Expert Academy의 Programming Advanced 강의를 기반으로 하고 있습니다)
-
-# Greedy Algorithm
 
 # 1차시. 탐욕 알고리즘
 
