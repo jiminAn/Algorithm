@@ -62,7 +62,35 @@ int main(void){
 : iterator 쓸 때 주의할 점  
 it.erase(it) -> x : iterator에서 제거 연산을 사용할 경우 더 이상 해당 iterator를 사용하지 못함  
 it = it.erase(it) -> o : 원소를 제거하고 다음 원소를 반환한 값을 it에 저장하여 삭제된 원소 다음의 원소를 iterator가 가리키게 함  
-it = it.insert(it,2) 경우도 마찬가지, it는 삽입한 원소 2를 가리키게 된다
+it = it.insert(it,2) 경우도 마찬가지, it는 삽입한 원소 2를 가리키게 된다. 
+
+## 그리디 알고리즘
+### 1541. 잃어버린 괄호
+- <https://www.acmicpc.net/problem/1541>    
+: 문자열로 받은 수학 수식을 c++에서 간편하게 계산하기 
+```
+#include <string>
+strint str = "10+20-30+40";
+string tmp = "";
+int ans = 0;
+bool minus_check = false;
+
+for(int i = 0; i < str.length(); i++){
+    if( str[i] == '+' || str[i] == '-' || str[i] == NULL ){
+        if( minus_check ) //이전 부호가 마이너스일 경우 빼주기
+            ans -= stoi(tmp);
+        else //이전 부호가 플러스일 경우 더해주기
+            ans += stoi(tmp);
+        if( str[i] == '-' )
+            minus_check = true;
+        else
+            minus_check = false;
+        tmp = "":
+        continue; //숫자만 tmp에 저장하기 위해
+    }
+    tmp += str[i];
+}
+```
 
 # 프로그래머스 레벨별로 풀어보기
 ## LEVEL 2
