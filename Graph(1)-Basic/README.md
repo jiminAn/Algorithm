@@ -1,6 +1,4 @@
 # Graph(1)-Basic (2020.05.20),(2020.09.16)
-[##_Image|kage@couadN/btqIPQUeQg9/dJDCPAc3etsqZJ1S7kpuZ1/img.png|alignCenter|data-origin-width="0" data-origin-height="0" data-ke-mobilestyle="widthContent"|||_##]
-
 (본 강의 노트는 SW Expert Academy의 Programming Advanced 강의를 기반으로 하고 있습니다)
 
 
