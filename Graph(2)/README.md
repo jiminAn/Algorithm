@@ -1,110 +1,192 @@
 # 그래프의 최소 비용 문제(2020.05.27) | (2020.09.16)
-## 최소 신장 트리 문제 
-: 가중치 그래프에서 모든 정점들을 연결하는 간선들의 가중치의 합이 최소가 되는 트리를 찾는 문제 
+(본 강의 노트는 SW Expert Academy의 Programming Advanced 강의를 기반으로 하고 있습니다)
 
-### 최소 신장 트리 문제 해결 알고리즘
-#### Prim Algorithm(Vertex-based algorithm)
-: 가장 weight가 작은 간선과 연결된 vertex를 추가해나가면서 최소 신장 트리를 완성  
+# 그래프의 최소 비용 문제
 
-##### 알고리즘 동작하기 위해 필요한 정보
+## 1차시. 최소 신장 트리
+
+### 문제 유형
+
+1.  최소 신장 트리 문제
+
+-   가중치 그래프에서 모든 정점들을 연결하는 간선들의 가중치의 합이 최소가 되는 트리를 찾는 문제
+
+2.  최단 경로 문제
+
+-   시작 정점에서 목표 정점까지 가는 간선의 가중치의 합이 최소가 되는 경로를 찾는 문제
+
+### 신장트리란(Spanning Tree)?
+
+: N개의 정점을 포함하는 무향 그래프에서 N개의 정점과 N-1개의 간선으로 구성된 트리
+
+### 최소 신장 트리란(Minimum Spanning Tree)?
+
+: 간선에 가중치를 줘서 신장 트리를 구성하는 간선의 가중치의 합이 최소인 신장 트리
+
+-   최소 신장 트리를 찾는 알고리즘: 프림, 크루스칼 알고리즘
+
+## 2차시. 프림 알고리즘(Vertex oriented Algotirhm )
+
+### 프림알고리즘이란?
+
+: 한 정점에 연결된 간선들 중 최소 간선을 가진 정점을 선택해나가며 최소 신장 트리를 만들어가는 방식
+
+1.  임의의 정점을 하나 선택해서 시작
+2.  선택한 정점들과 인접하는 정점들 중에 최소 비용의 간선이 존재하는 정점을 선택
+3.  선택한 간선의 개수가 n-1개가 될 때 까지 이를 반복(단, 정점의 개수는 n개)
+
+### 프림 알고리즘을 동작하기 위해 필요한 정보
+
 : 두 종류의 상호 배타 집합에 관한 정보
-1. 트리 정점(U) : 최소 신장 트리를 만들기 위해 선택된 정점
-2. 비트리 정점(V-U) : 선택되지 않은 정점
-: edge에 관한 정보
-1. candidate edge : 한 정점에 연결된 모든 edge
-2. 선택된 edge(set T) : candidate edge중 min-weight이며, edge에 연결된 두 노드가 서로 상호 배타인 경우
 
-##### 알고리즘 동작 과정
-1. set T를 공집합으로 초기화(size(T)= n-1)
-2. U에 시작 정점을 넣기
-3. U와 V-U사이에 연결된 모든 edge들은 candidate edge
-4. candidate edge들 중 가장 min-weight edge를 T에 추가하고 해당 edge와 연결된 V-U에 있던 정점을 U에 넣기
-5. U == V가 될때까지 즉, 모든 정점이 U에 추가될 때까지 3~4과정을 반복
+1.  트리 정점(Tree vertices)
 
-##### pseudocode
-Tree prim(Vertex V, Edge E){  
-&nbsp;&nbsp;&nbsp;&nbsp;Vertex *U;  
-&nbsp;&nbsp;&nbsp;&nbsp;Vertex u,v;  
-&nbsp;&nbsp;&nbsp;&nbsp;T = {};  
-&nbsp;&nbsp;&nbsp;&nbsp;U = {A};  
-&nbsp;&nbsp;&nbsp;&nbsp;while( U != V){  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(u,v) = lowest cost edge with u in U and v in (V-U);  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T += (u,v);  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U += v;  
-&nbsp;&nbsp;&nbsp;&nbsp;}  
-&nbsp;&nbsp;&nbsp;&nbsp;return T;  
-}  
+-   최소 신장 트리를 만들기 위해 선택된 정점
 
+2.  비트리 정점 (non-tree verticies)
 
-#### Kruskal Algorithm( Edge-Oriented algorithm)
-: weight가 작은 순으로 edge를 정렬한 후 cycle이 생기지 않게 edge를 추가해나가면서 최소 신장 트리를 완성
-*cycle 을 체크하는 방법에 따라 두 가지 시간 복잡도를 가지게 됨
-1. dfs를 사용하여 체크: O(n^2)
-2. UNION_FIND 연산으로 체크: O(nlogn) --> Improved performance
+-   선택되지 않은 정점
 
-##### 알고리즘 동작하기 위해 필요한 정보
-1. UNION_FIND 연산 : cycle이 있는지 check하기 위해 label을 닮
-- UNION: 합치면서 label을 변경  --> O(1)
-- FIND : O(logn)
-2. min-cost tree T: 최소 신장 트리
+### 코드
 
-##### 알고리즘 동작 과정
-1. G의 모든 edge들을 오름차순으로 정렬해서 list에 넣기
-2. 정렬된 list에서 min-cost edge를 고르고 min-cost tree T에 추가하기
-*단 edge추가시 cycle이 생기면 안됨
-3. T가 n-1개의 edge를 가지거나, sorted list가 empty가 될 때가지 이 과정을 반복
+```
+MST_PRIM(G,r) // G : graph, r : start vertex
+    /* initialize U.key and U.parent */
+    FOR ALL u in G.v // G.v : set of vertecies
+        u.key = MAX_VALUE // u.key : u is a edge that minimum weight connected to U
+        u.parent = NULL // u.parent : parent of U in tree
+    r.key = 0
+    Q = G.v // put in Q, all the vertecies (Q is priority queue)
+    WHILE Q is not empty
+        u = Extract_MIN(Q) // bring key that has minimum value in Q
+        FOR ALL v in ADJ(G,u) // ADJ : Adjacent vertecies
+            IF v in Q AND weight(u,v) < v.key
+                v.parent = u
+                v.key = weight(u,v) // renew the distance with tree
+```
 
-##### pseudocode
-Tree Kruskal(Vertex V, Edge E){  
-&nbsp;&nbsp;&nbsp;&nbsp;T = {};    
-&nbsp;&nbsp;&nbsp;&nbsp;sort edge in E in ascending order;  
-&nbsp;&nbsp;&nbsp;&nbsp;for each vertex V in the set V  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEW_LABEL(v);  
-&nbsp;&nbsp;&nbsp;&nbsp;for each (u,v) in E, in ascending oreder of weight{  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if LABEL(u) is not equal to LABEL(V){  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;add the edge (u,v) to the tree T;  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UNION(LABEL(u), LABEL(v));  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}    
-&nbsp;&nbsp;&nbsp;&nbsp;}  
-&nbsp;&nbsp;&nbsp;&nbsp;return T;  
-}   
+-   해당 함수 종료 시, parent에 저장되어 있는 정보가 최소신장트리에 해당
 
-#### 용어 정리
-1. 신장 트리(Spanning Tree) : N개의 정점을 포함하는 무향 그래프에서 n개의 정점과 n-1개의 간선으로 구성된 트리
-2. 최소 신장 트리 : 간선에 가중치를 줘서 신장 트리를 구성하는 간선의 가중치의 합이 최소인 신장 트리
+## 3차시. 크루스칼 알고리즘( Edge oriented Algorithm )
 
+### 크루스칼 알고리즘이란?
 
+: 최소 가중치 간선을 하나씩 선택해서 최소 신장 트리를 찾는 알고리즘
 
-## 최단 경로 문제
-: 시작 정점에서 목표 정점까지 가는 간선의 가중치의 합이 최소가 되는 경로를 찾는 문제
-1. 단일 시작점 최단 경로 문제
-- Dijkstra Algorithm : 음의 가중치를 허용하지 않음
-- Bellman-Ford Algorithm : 음의 가중치 허용, 가중치의 합이 음인 사이클은 허용하지 않음
-2. 모든 쌍 최단 경로 문제
-- Floyd-Warshall Algorithm
+-   단, 사이클이 생기지 않아야 한다.
+-   N개의 상호 배타 집합이 존재함
+-   간선을 선택하면 간선의 두 정점이 속한 트리가 연결되어 하나의 집합으로 됨
+-   선택한 간선의 두 정점이 이미 연결된 트리에 속하는 정점이면 사이클이 생김
 
-### 단일 시작점 최단 경로 문제 (Single Source Shortest Path)
-:G내에 있는 한 노드로부터 다른 모든 노드로 까지의 최단거리
+### 크루스칼 알고리즘의 동작 과정
 
-#### Dijkstra Algorithm 
-: 시작 정점에서 거리가 최소인 정점부터 선택해 나가면서 최단 경로를 구하는 방식  
-- 방향 그래프  
-- 양수 가중치만을 가지는 egde  
-- 시간복잡도 O(m)+O(nlogn)
+1.  최초 모든 간선을 가중치에 따라 오름차순으로 정렬
+2.  가중치가 가장 낮은 간선부터 선택하면서 트리를 증가시킴
 
-#### Bellman-Ford Algorithm
-: Dijkstra Algorithm 은 negative edge를 catch하지 못하는 점을 개선한 알고리즘
-- 음의 edge는 허용하나 음의 cycle은 불가
-- 지나간 time clock도 봄 --> 시간복잡도 O(n^2)
+-   사이클이 존재하면 다음으로 가중치가 낮은 간선 선택
 
-### 모든 쌍 최단 경로 문제 (All Pairs Shortest Path)
-#### Floyd-Warshall Algorithm
+3.  n-1 개의 간선이 선택될 때까지 앞의 과정 반복
 
+### 코드
 
+```
+MST_KRUSKAL(G)
+    T = empty_set
+    FOR ALL v in G.v
+        Make_set(v)
+    sort(G.e.start, G.e.end) // default is ascending order
 
-### ---------------------------------적용 문제 예시--------------------------------------
+    WHILE T.size() < |V| - 1
+        u = Extract_MIN(G.e) // choose the edge that has minimum weight
+        IF Find_set(U) != Find_set(v)
+            T = T UNION {(u,v)}
+            Union(u,v)
+    RETURN T
+```
 
-* 1197번.최소 스패닝 트리 https://www.acmicpc.net/problem/1197
-- 참고 : <https://www.geeksforgeeks.org/prims-algorithm-using-priority_queue-stl/>
-* 1916번.최소 비용 구하기 <https://www.acmicpc.net/problem/1916>
-- 참고 : <https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-priority_queue-stl/?ref=lbp>
+### 크루스칼 알고리즘의 특징
+
+1.  간선 선택 과정에서 생성되는 트리를 관리하기 위해 상호 배타 집합 사용
+
+-   트리에 속한 노드들을 자신을 루트로 하는 서브 트리의 높이를 랭크라는 이름으로 저장함
+
+2.  선택한 간선으로 두 개의 트리가 한 개의 트리로 합쳐질 때 각 트리에 해당하는 상호 배타 집합을 Union연산으로 합침
+3.  랭크 값이 작은 트리를 랭크 값이 큰 트리의 서브 트리로 포함시키게 되면 트리에 포함된 노드들의 랭크 값을 수정할 필요가 없음
+
+## 4차시. 최단
+
+### 최단경로란?
+
+: 간선의 가중치가 있는 유향 그래프에서 두 정점 사이의 경로들 중에 간선의 가중치의 합이 최소인 경로
+
+### 단일 시작점 최단 경로 문제
+
+1.  다익스트라 알고리즘
+
+-   음의 가중치를 허용하지 않음
+
+2.  벨만-포드 알고리즘
+
+-   음의 가중치 허용, 단, 음의 사이클은 허용하지 않음
+
+### 모든 쌍 최단 경로 문제
+
+1.  플로이드-워샬 알고리즘
+
+## 5차시. 다익스트라 알고리즘
+
+### 다익스트라 알고리즘이란?
+
+: 시작 정점에서 거리가 최소인 정점부터 선택해 나가면서 최단 경로를 구하는 방식
+
+-   탐욕 기법을 사용한 알고리즘으로 최소신장 트리를 구하는 프림알고리즘과 유사
+
+### 탐욕적 방법으로 정점 선택하기
+
+: 집합 S에 포함되지 않은 v를 집합 S에 포함시킬 때
+
+-   정점 v까지의 최단 경로: d\[u\] + w(u,v)
+-   P'+ w(x,y) <= P
+-   d\[u\] + w(u,v) <= P'+ w(x,y)
+-   만약 위의 식이 거짓이라면, 정점 v대신 y를 선택해야 함
+
+### 코드
+
+```
+// G : graph, r : start vertex, s : set of chosen vertecies
+// D : distance for all chosen vertecies weight == value of minimum path
+// P : Minimum Path tree
+// ADJ(u) : adjacent vertecies at U
+Dijkstar(G,r)
+    s = empty_set // initialize set S
+    FOR ALL v in V
+        D[v] = MAX_VALUE
+        P[v] = NULL
+    D[r] = 0
+
+    WHILE S != V
+        select u in V-S that Vertex has minimum D[u]
+        S = S UNION {u}
+        FOR ALL v in ADJ(u)
+            IF v in V - S and D[u] + weight(u,v)
+                D[v] = D[u] + weight(u,v)
+                P[v] = u
+```
+
+### 음의 가중치가 있을 경우
+
+: 이미 선택한 정점에 대해서는 다시 방문하지 않으므로, 음의 가중치가 있어도 이를 갱신하지 못해 음의 가중치가 있을 경우 다익스트라 알고리즘으로는 최단 경로를 찾을 수 없음
+
+### 벨만-포드 알고리즘
+
+: 음의 가중치를 포함하는 그래프에서 최단 경로를 구할 수 있음
+
+-   가중치의 합이 음인 싸이클은 허용하지 않음
+-   다익스트라로 최단 경로를 구할 수 있다면 벨만-포드로도 구할 수 있음
+
+1.  출발점에서 각 정점까지 간선 하나로 구성된 경로 고려, 최단 경로를 구함
+2.  최대 간선 2개까지 고려, 최단 경로 구함
+3.  최대 간선 N-1개 까지 고려한 경로들에서 최단 경로 구함
+4.  다익스트라 알고리즘에 비해 시간이 많이 소요됨
+
+-   다익스트라는 한 번 방문한 정점은 다시 방문하지 않지만, 벨만-포드는 음의 가중치를 찾아야하기 때문에 방문한 정점도 다시 방문
