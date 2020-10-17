@@ -24,7 +24,7 @@
 * Queue (2020.07.22)
 * List (2020.07.29)
 
-## CONTEMTS : KAKAO 기출 풀어보기
+## CONTENTS : KAKAO 기출 풀어보기
 
 
 
