@@ -16,3 +16,8 @@
 * link <https://programmers.co.kr/learn/courses/30/lessons/12980>
 
 
+## 2020 카카오 인턴십
+1. 키패드 누르기 (100/100)
+- ver 1.0 거리계산 배열 이용하기
+- ver 1.1 수학적 규칙 이용하기
+* link <https://programmers.co.kr/learn/courses/30/lessons/67256>
