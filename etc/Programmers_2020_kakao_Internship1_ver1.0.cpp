@@ -1,6 +1,5 @@
 #include <string>
 #include <vector>
-#include <iostream>
 // 대각선은 2, 옆은 1
 
 using namespace std;
@@ -22,20 +21,16 @@ pair<int,int> left_hand(int l, int r);
 pair<int,int> right_hand(int l, int r);
 
 
-int main(void){
-    vector<int> num = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-    string hand = "right";
+string solution(vector<int> num, string hand) {
 
-    
     pair<int,int> memory_hand = make_pair(10, 11);// 10 == *, 11 == #
     pair<int,int> tmp;
-    
     for(int i = 0; i < num.size(); i++){
         tmp = memory_hand;
-        if( num[i] % 3 == 1)// 키패드 상 왼쪽
+        if( num[i] == 1 || num[i] == 4 || num[i] == 7)// 키패드 상 왼쪽
             memory_hand = left_hand(num[i],tmp.second);
 
-        else if( num[i] % 3 == 0 && num[i] != 0 )// 키패드 상 오른쪽
+        else if( num[i] == 3 || num[i] == 6 || num[i] == 9 )// 키패드 상 오른쪽
             memory_hand = right_hand(tmp.first,num[i]);
 
         else{ // 키패드 상 가운데 숫자를 누를 경우
@@ -46,24 +41,21 @@ int main(void){
                     memory_hand = left_hand(num[i],tmp.second);
             }
             else{// 두 손이 거리가 다를 경우
-                cout << "memory" << tmp.first << tmp.second << '\n';
-                cout << num[i] << ':' << dist[num[i]][tmp.first] << dist[num[i]][tmp.second] << '\n';
                 if( dist[num[i]][tmp.first] > dist[num[i]][tmp.second])// 오른쪽 손이 더 가까울 경우
                     memory_hand = right_hand(tmp.first,num[i]);
                 else // 왼쪽 손이 더 가까울 경우
                     memory_hand = left_hand(num[i],tmp.second);
-         
+
             }
         }
     }
-    cout << answer;
-    return 1;
+    return answer;
 }
 
 pair<int,int> left_hand(int l, int r){
     answer += "L";
     return make_pair(l,r);
-        
+
 }
 pair<int,int> right_hand(int l, int r){
     answer += "R";
