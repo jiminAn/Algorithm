@@ -2,9 +2,9 @@
 
 
 ## 알고리즘 문제 출처 & 참고 강의
-* [백준알고리즘(문제)](https://www.acmicpc.net/)
-* [프로그래머스(문제)](https://programmers.co.kr/)
-* [SW Expert Academy(강의)](https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDYSqAAbw5UW6)
+* [백준알고리즘](https://www.acmicpc.net/)
+* [프로그래머스](https://programmers.co.kr/)
+* [SW Expert Academy](https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDYSqAAbw5UW6)
 
 
 
