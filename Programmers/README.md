@@ -12,8 +12,10 @@
 2. [점프와 순간이동](https://programmers.co.kr/learn/courses/30/lessons/12980)
 
 
-## 2020 카카오 인턴십
+## [2020 카카오 인턴십](https://programmers.co.kr/learn/challenges?selected_part_id=18498)
 1. [키패드 누르기](https://programmers.co.kr/learn/courses/30/lessons/67256)
 - ver 1.0 거리계산 배열 이용하기
 - ver 1.1 수학적 규칙 이용하기
+
+2. [수식 최대화](https://programmers.co.kr/learn/courses/30/lessons/67257)
 
