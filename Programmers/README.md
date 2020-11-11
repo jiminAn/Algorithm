@@ -18,4 +18,4 @@
 - ver 1.1 수학적 규칙 이용하기
 
 2. [수식 최대화](https://programmers.co.kr/learn/courses/30/lessons/67257)
-
+- 분할정복
