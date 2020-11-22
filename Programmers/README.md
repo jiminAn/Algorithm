@@ -19,3 +19,5 @@
 
 2. [수식 최대화](https://programmers.co.kr/learn/courses/30/lessons/67257)
 - 분할정복
+
+3. [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258)
