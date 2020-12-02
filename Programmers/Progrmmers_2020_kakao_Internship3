@@ -1,0 +1,46 @@
+# defaultdict 클래스의생성자로 기본값을 생성해주는 함수를 넘기면,
+# 모든 키에 대해서 값이 없는 경우 자동으로 생성자의 인자로 넘어온 함수를
+# 호출하여 그 결과값으로 설정해줌
+from collections import defaultdict
+
+
+def solution(gems):
+    answer = [0,0]
+    candidates = []
+    start, end = 0, 0
+    
+    # set함수를 이용하여 보석의 종류 확인
+    # set 생성시간복잡도 O(len(gems))
+    gems_len, gems_kind = len(gems), len(set(gems))
+    # defaultdict(int)와 동일하게 동작; 0을 리턴
+    # defualt key 값이 0으로 저장
+    gems_dict = defaultdict(lambda : 0)
+                                        
+    while True:
+        kind = len(gems_dict)
+        if start == gems_len:# 탐색 종료
+            break
+        if kind == gems_kind:
+            # 후보 인덱스 페어를 저장
+            candidates.append((start, end))
+            gems_dict[gems[start]] -= 1
+            if gems_dict[gems[start]] == 0:
+                del gems_dict[gems[start]]
+            start += 1
+            continue
+        if end == gems_len: 
+            break
+        if kind != gems_kind:
+            gems_dict[gems[end]] += 1
+            end += 1
+            continue
+            
+            
+    length = float('inf') # 양의 무한대로 설정
+    for s, e in candidates:
+        if length > e-s:
+            length = e-s
+            answer[0] = s + 1
+            answer[1] = e
+    return answer
+        
