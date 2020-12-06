@@ -1,6 +1,3 @@
-# defaultdict 클래스의생성자로 기본값을 생성해주는 함수를 넘기면,
-# 모든 키에 대해서 값이 없는 경우 자동으로 생성자의 인자로 넘어온 함수를
-# 호출하여 그 결과값으로 설정해줌
 from collections import defaultdict
 
 
