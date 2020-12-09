@@ -24,4 +24,4 @@
 * Queue (2020.07.22)
 * List (2020.07.29)
 
-## CONTENTS : 2020 Kakao Internship 
+## CONTENTS : 2020 Kakao Internship(Programmers)
