@@ -94,4 +94,4 @@ f(n) = min(f(n-6),f(n-4),f(n-1)} + 1
 * 2293번.동전 1 <https://www.acmicpc.net/problem/2293>
 * 1912번.연속합 <https://www.acmicpc.net/problem/1912>
 * 1149번.RGB거리 <https://www.acmicpc.net/problem/1149>
-
+* 1520번.내리막길
