@@ -6,9 +6,6 @@
 * [프로그래머스](https://programmers.co.kr/)
 * [SW Expert Academy](https://swexpertacademy.com/main/learn/course/subjectList.do?courseId=AVuPDYSqAAbw5UW6)
 
-
-
-
 ## CONTENTS : Algorithm
 * Greedy Algorithm (2020.04.16), (2020.09.09)
 * Divide and Conquer (2020.04.23) 
