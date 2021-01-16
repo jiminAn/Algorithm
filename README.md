@@ -24,4 +24,4 @@
 
 ## CONTENTS : Programmers
 - 2020 Kakao Internship
-- 2020 KaKao Blinde Recruitment
+- 2020 KaKao Blind Recruitment
