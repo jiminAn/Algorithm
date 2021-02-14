@@ -25,3 +25,5 @@
 ## CONTENTS : Programmers
 - 2020 Kakao Internship
 - 2020 KaKao Blind Recruitment
+
+https://hangouts.google.com/call/7WXaiqhyCkaczuj2dodKACEM?no_rd
