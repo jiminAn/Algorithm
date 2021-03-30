@@ -22,3 +22,10 @@
 
 3. [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258)
 - 투포인터 알고리즘
+
+
+
+## [2020 카카오 블라인드 채용](https://programmers.co.kr/learn/challenges)
+1. [가사 검색](https://programmers.co.kr/learn/courses/30/lessons/60060)
+- 이분탐색, defaultdict, 문자열 검색
+- 단순하게 풀 수는 있으나, 시간복잡도가 굉장히 중요한 
