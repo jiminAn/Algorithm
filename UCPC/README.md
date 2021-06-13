@@ -13,6 +13,8 @@ loc : `./2020`
 - 예선 문제
   1. [수학은 비대면강의입니다](https://www.acmicpc.net/problem/19532) : Bruteforce, math
      - `./1_A_19532.py` 
+  2. [사과나무](https://www.acmicpc.net/problem/19539) : Greedy, math
+     - `./2_H_19539.py`
 
 - 본선 문제
 
