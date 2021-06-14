@@ -16,5 +16,7 @@ loc : `./2020`
   2. [사과나무](https://www.acmicpc.net/problem/19539) : Greedy, math
      - `./2_H_19539.py`
 
+  3. [루머](https://www.acmicpc.net/problem/19538)
+
 - 본선 문제
 
