@@ -1,10 +1,10 @@
 # UCPC 2021 
-- [대회 링크](https://ucpc.me/)
-UCPC 2021 대회 준비
+- [대회 링크](https://ucpc.me/)  
 
 
 
-## UCPC 2020
+## 기출 문제 풀이
+### UCPC 2020
 
 loc : `./2020` 
 
