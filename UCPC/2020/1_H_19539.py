@@ -1,10 +1,10 @@
 # BaekJoon 19539
 # Math, Greedy
-
 import sys
+input = sys.stdin.readline
 
-n = int(sys.stdin.readline())
-heights = list(map(int, sys.stdin.readline().split()))
+n = int(input())
+heights = list(map(int, input().split())
 heights_sum = sum(heights)
 turn = heights_sum // 3 # +2 물뿌리개가 등장해야하는 횟수
 
