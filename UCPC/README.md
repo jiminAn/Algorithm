@@ -20,6 +20,9 @@ loc : `./2020`
   3. [루머](https://www.acmicpc.net/problem/19538) : Graph, BFS
      - './1_G_19538.py'
      - solved : 20210619,0621
+  4. [ㄷㄷㄷㅈ](https://www.acmicpc.net/problem/19535) : Graph, math
+     - './1_D_19535.py'
+     - solved : 20210703
 
 - 본선 문제
 
