@@ -23,6 +23,9 @@ loc : `./2020`
   4. [ㄷㄷㄷㅈ](https://www.acmicpc.net/problem/19535) : Graph, math
      - './1_D_19535.py'
      - solved : 20210703
+  5. [전투 시뮬레이션](https://www.acmicpc.net/problem/19537) 
+  6. [역학 조사](https://www.acmicpc.net/problem/19541)
+  7. [삼항 연산자](https://www.acmicpc.net/problem/19534)
 
 - 본선 문제
 
