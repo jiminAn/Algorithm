@@ -29,3 +29,21 @@ loc : `./2020`
 
 - 본선 문제
 
+### UCPC 2019
+
+loc : `./2019`
+
+------
+
+- [예선 문제](https://www.acmicpc.net/category/detail/2053)
+  1. [수학은 체육과목 입니다2](https://www.acmicpc.net/problem/17362) : math
+     - `./1_A_17362.py`
+     - solved: 20210711
+  2. [우유가 넘어지면?](https://www.acmicpc.net/problem/17363):
+     - `./1_B_17363.py`
+     - solved: 20210711
+  3. [육각형 우리 속의 개미](https://www.acmicpc.net/problem/17370)
+  4. [이사](https://www.acmicpc.net/problem/17371)
+     - ./1_J_17371.py
+     - solved: 20210711
+
