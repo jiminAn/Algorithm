@@ -59,7 +59,9 @@ loc : `./2019`
 - [예선 문제](https://www.acmicpc.net/category/detail/1891)
 
   1. [수학은 체육과목입니다](https://www.acmicpc.net/problem/15894)
-  2. [카드 합체 놀이](https://www.acmicpc.net/problem/15903)
-  3. [나무 탈출](https://www.acmicpc.net/problem/15900)
+      - `./1_A_15894.py`
+      - solved: 20210714
+  3. [카드 합체 놀이](https://www.acmicpc.net/problem/15903)
+  4. [나무 탈출](https://www.acmicpc.net/problem/15900)
 
   
