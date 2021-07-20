@@ -16,7 +16,7 @@
 * Dynamic Programming (2020.06.10), (2020.08.18)
 
 ## CONTENTS : UCPC
-* 2020 예선 문제 (2020.06.12~_
+* 2020 예선 문제 (2020.06.12~
 
 
 ## CONTENTS : Data Structure
