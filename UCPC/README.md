@@ -83,7 +83,7 @@ loc : `./2019`
       - `./1_H_15897.py`
       - Solved:20210718
 
-  6. [피아의 아틀리에 ~신비한 대회의 연금술사~](https://www.acmicpc.net/problem/15898)
+  6. [피아의 아틀리에 신비한 대회의 연금술사](https://www.acmicpc.net/problem/15898)
 
      
 
