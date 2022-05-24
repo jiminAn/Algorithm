@@ -16,12 +16,13 @@ loc : `./2021`
 
 1. [수학은 체육과목입니다3](https://www.acmicpc.net/problem/22351) : String, Parsing, Brute-force
      - `./1_A_22351.py` 
-     - solved : 20220521
-
+     - 1st solved : 20210803
+     - 2nd solved : 20220521
 
 2. [항체 인식](https://www.acmicpc.net/problem/22352) : BFS/DFS
      - `./2_B_22352.py` 
-     - solved : 20220524
+     - 1st solved : 20210802
+     - 2nd solved: 20220524
 
 ### UCPC 2020
 
