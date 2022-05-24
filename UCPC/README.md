@@ -19,6 +19,10 @@ loc : `./2021`
      - solved : 20220521
 
 
+2. [항체 인식](https://www.acmicpc.net/problem/22352) : BFS/DFS
+     - `./2_B_22352.py` 
+     - solved : 20220524
+
 ### UCPC 2020
 
 loc : `./2020` 
