@@ -1,10 +1,23 @@
-# UCPC 2021 
+# UCPC 2022
 
-- [대회 링크](https://ucpc.me/)  
+- [대회 링크]([https://ucpc.me/](https://ucpc.me/qualifier/))  
 
 
 
 ## 기출 문제 풀이
+
+### UCPC 2021
+
+loc : `./2021`
+
+------
+
+- [예선 문제](https://www.acmicpc.net/category/detail/2692)
+
+1. [수학은 체육과목입니다3](https://www.acmicpc.net/problem/22351) : String, Parsing, Brute-force
+     - `./1_A_22351.py` 
+     - solved : 20220521
+
 
 ### UCPC 2020
 
